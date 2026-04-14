@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import {
   Github,
   Sparkles,
@@ -50,15 +49,11 @@ function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo with brand icon */}
           <div className="flex items-center gap-2.5">
-            <div className="relative h-9 w-9 overflow-hidden rounded-lg">
-              <Image
-                src="/images/logo.png"
-                alt="Cafe AI"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+            <img
+              src="/images/logo.png"
+              alt="Cafe AI"
+              className="h-9 w-9 rounded-lg object-contain"
+            />
             <span className="text-lg font-semibold tracking-tight">
               Cafe AI
             </span>
@@ -355,14 +350,11 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo with brand icon */}
           <div className="flex items-center gap-2.5">
-            <div className="relative h-8 w-8 overflow-hidden rounded-lg">
-              <Image
-                src="/images/logo.png"
-                alt="Cafe AI"
-                fill
-                className="object-contain"
-              />
-            </div>
+            <img
+              src="/images/logo.png"
+              alt="Cafe AI"
+              className="h-8 w-8 rounded-lg object-contain"
+            />
             <span className="text-lg font-semibold">Cafe AI</span>
           </div>
 
@@ -402,19 +394,14 @@ function OilPaintingBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {/* Real oil painting background image */}
-      <Image
+      <img
         src="/images/landing-bg.jpg"
         alt=""
-        fill
-        priority
-        className="object-cover object-center"
-        quality={90}
+        className="absolute inset-0 w-full h-full object-cover object-center"
       />
       
       {/* Dark overlay for text readability */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"
-      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
       
       {/* Vignette effect */}
       <div
